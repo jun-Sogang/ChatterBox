@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>chatterbox</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="images/fontello-85778e94/css/copy.css">
+    <!-- dependencies -->
+
+  </head>
+  <body>
+    <div id="main">
+      <h1>chatterbox</h1>
+      <div >Room</div>
+        <select id="roomSelect">
+          <option id="None" value="None">Select Room</option>
+          <option id="newroom" value="newroom">Newroom..</option>
+        </select>
+
+      <div id="send">
+          <br>
+        Nickname : <input type="text" id='nickname' size='20'>
+        <br><br>
+        Message : <input type="text" name="message" id="message" size='30'>
+        <input type="submit" name="submit" class="submit" value="Send"/>
+      </div>
+    </div>
+    <div id="chats">
+
+
+    </div>
+  </body>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script>
+    // YOU DO NOT NEED TO EDIT THIS CODE
+    if (!/(&|\?)username=/.test(window.location.search)) {
+      var newSearch = window.location.search;
+      if (newSearch !== '' & newSearch !== '?') {
+        newSearch += '&';
+      }
+      newSearch += 'username=' + (prompt('What is your name?') || 'anonymous');
+      window.location.search = newSearch;
+    }
+  </script>
+  <!-- your scripts -->
+  <script src="scripts/app.js"></script>
+</html>

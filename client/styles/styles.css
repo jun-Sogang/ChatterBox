@@ -1,0 +1,160 @@
+body {
+    background: #eee;
+    text-align: center;
+    padding: 0 25px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#main, #chats {
+    width: 500px;
+    margin: auto;
+    text-align: left;
+    background: white;
+    padding: 50px 60px;
+    border: solid #ddd;
+    border-width: 0 1px 1px 1px;
+    color:gray;
+
+}
+
+#main h1 {
+    margin-top: 0;
+    font-size: 35px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+#main h1 span {
+    font-style:italic;
+}
+
+#main ul {
+    padding-left: 20px;
+}
+
+#main .error {
+    border: 1px solid red;
+    background: #FDEFF0;
+    padding: 20px;
+}
+
+#main .success {
+    margin-top: 25px;
+}
+
+#main .success code {
+    font-size: 12px;
+    color: green;
+    line-height: 13px;
+}
+
+form {
+    padding: 20px;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+form input[type=text] {
+    margin-right: 10px;
+    width: 70%;
+    font-size: 12px;
+    padding: 5px;
+}
+
+.chat {
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: #eee;
+}
+
+.chat .username {
+    font-weight: 800;
+}
+
+.chat:hover {
+    background-color: #ddd;
+}
+
+#chat .message{
+  background-color:
+}
+
+.spinner {
+    float: right;
+    height: 46px;
+    margin-bottom: 5px;
+}
+
+.spinner img {
+    padding: 10px;
+}
+
+.friend {
+    color: #fff;
+    background-color: #0090da;
+}
+
+#roomSelect{
+   -webkit-appearance:none;
+   appearance:none;
+   -moz-apperance:none;
+   background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+   height: 29px;
+   overflow: hidden;
+   width: 240px;
+   padding-left:5px;
+  font-size:12px
+}
+
+
+
+
+
+#None input{
+  background-color: #000;
+}
+
+#main{
+  background-color: #5FCEC0;
+  color:white;
+}
+
+
+.text
+{
+position: relative;
+width: 480px;
+height: 40px;
+padding: 10px;
+background: #E0E0E0;
+word-wrap:break-word;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+}
+
+.text:after
+{
+  margin-top:7px;
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 0 15px 16px;
+border-color: #E0E0E0 transparent;
+display: block;
+width: 0;
+z-index: 1;
+top: -16px;
+left: 30px;
+}
+
+
+
+.username{
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+.icon-user:before {
+  content: '\e805';
+  padding-right : 5px;
+ }
