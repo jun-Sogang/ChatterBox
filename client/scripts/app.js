@@ -1,5 +1,5 @@
 var app = {
-	server: 'http://ec2-52-78-46-241.ap-northeast-2.compute.amazonaws.com:4000',
+	server: 'http://127.0.0.1:4000',
 	check: {},
 	lastObjectID: 0,
 	IsNickWhite: true,
@@ -72,7 +72,6 @@ app.init = function() {
 			text: $('#message').val(),
 			roomname: $("#roomSelect option:selected").val(),
 		};
-		debugger;
 		if (app.isEmptyNickname()) {
 			app.changeBackgroundColorToGray($('#nickname'));
 			app.IsNickWhite = false
@@ -117,9 +116,10 @@ app.init = function() {
 
 };
 app.send = function(message) {
+	$('#message').val()='';
 	$.ajax({
 		// This is the url you should use to communicate with the AWS server.
-		url: 'http://ec2-52-78-46-241.ap-northeast-2.compute.amazonaws.com:4000',
+		url: app.server,
 		type: 'POST',
 		data: JSON.stringify(message),
 		contentType: 'application/json',
@@ -137,7 +137,7 @@ app.send = function(message) {
 app.fetch = function() {
 	$.ajax({
 		// This is the url you should use to communicate with the AWS server.
-		url: 'http://ec2-52-78-46-241.ap-northeast-2.compute.amazonaws.com:4000',
+		url: app.server,
 		type: 'GET',
 		data: JSON.stringify(message),
 		contentType: 'application/json',
@@ -147,7 +147,7 @@ app.fetch = function() {
 			app.MakeUnduplicatedRoom(results);
 			app.RenderMessageInSelectedRoom(results);
 			app.lastObjectID = results.length;
-			app.fetch();
+			setTimeout(() => app.fetch(), 300)
 			console.log('chatterbox: Message fetched');
 		},
 		error: function(data) {
